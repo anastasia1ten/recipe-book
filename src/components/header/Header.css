@@ -1,0 +1,39 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 16px 24px;
+  border-bottom: 1px solid #e5e5e5;
+  background: #fff;
+}
+
+.header-logo-btn {
+  border: none;
+  background: none;
+  font-size: 20px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.header-nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.header-nav button {
+  border: none;
+  background: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.header-nav button.active {
+  background: #f0f0f0;
+  font-weight: 600;
+}
