@@ -2,10 +2,10 @@ import { Card } from '../../components/card/Card';
 import './About.css';
 
 const team = [
-  { name: 'Участник 1', role: 'Каркас и навигация' },
-  { name: 'Участник 2', role: 'Структура страниц' },
-  { name: 'Участник 3', role: 'Рецепты' },
-  { name: 'Участник 4', role: 'Стили' },
+  { name: 'Горбунов Даниил', role: 'Каркас и навигация', photo: '/images/members/danil.png' },
+  { name: 'Тен Анастаия', role: 'Структура страниц', photo: '/images/members/ten.png' },
+  { name: 'Кудряшова Светлана', role: 'Рецепты', photo: '/images/members/sveta.png' },
+  { name: 'Темирбулатова Алиса', role: 'Стили', photo: '/images/members/alica.png' },
 ];
 
 export const AboutPage = () => {
@@ -27,7 +27,11 @@ export const AboutPage = () => {
               новости проекта и форма для связи с пользователями.
             </p>
           </div>
-          <div className="image-placeholder">О проекте</div>
+          <img
+            className="about-intro-image"
+            src="/images/recipes/food-1.jpg"
+            alt="Блюда из нашего каталога"
+          />
         </section>
 
         <section className="section">
@@ -37,8 +41,10 @@ export const AboutPage = () => {
               <Card
                 key={member.name}
                 title={member.name}
-                image={<span>Фото</span>}
-              />
+                image={<img src={member.photo} alt={member.name} />}
+              >
+                <p>{member.role}</p>
+              </Card>
             ))}
           </div>
         </section>

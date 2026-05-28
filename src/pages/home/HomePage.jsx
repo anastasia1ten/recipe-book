@@ -18,7 +18,11 @@ export const HomePage = ({ onNavigate }) => {
                 </button>
               </div>
             </div>
-            <div className="image-placeholder">Изображение блюда</div>
+            <img
+            className="home-hero-image"
+            src="/images/recipes/food-11.jpg"
+            alt="Домашние блюда"
+          />
           </section>
 
           <section className="section">
@@ -47,7 +51,6 @@ export const HomePage = ({ onNavigate }) => {
                 Читать о команде
               </button>
             </div>
-            <div className="image-placeholder">Фото команды</div>
           </section>
         </div>
 

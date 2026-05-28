@@ -1,3 +1,4 @@
+import { recipes } from '../../data/recipes';
 import './Recipes.css';
 
 export const RecipesPage = () => {
@@ -11,27 +12,32 @@ export const RecipesPage = () => {
 
         <section className="recipes-catalog section">
           <div className="recipes-grid" id="recipes-grid">
-            <article className="recipe-slot">
-              <div className="recipe-slot-image">Фото</div>
-              <div className="recipe-slot-body">
-                <h3>Рецепт 1</h3>
-                <p>Описание появится на следующем этапе.</p>
-              </div>
-            </article>
-            <article className="recipe-slot">
-              <div className="recipe-slot-image">Фото</div>
-              <div className="recipe-slot-body">
-                <h3>Рецепт 2</h3>
-                <p>Описание появится на следующем этапе.</p>
-              </div>
-            </article>
-            <article className="recipe-slot">
-              <div className="recipe-slot-image">Фото</div>
-              <div className="recipe-slot-body">
-                <h3>Рецепт 3</h3>
-                <p>Описание появится на следующем этапе.</p>
-              </div>
-            </article>
+            {recipes.map((recipe) => (
+              <article key={recipe.id} className="recipe-card">
+                <img className="recipe-card-image" src={recipe.image} alt={recipe.title} />
+                <div className="recipe-card-body">
+                  <p className="recipe-card-meta">
+                    {recipe.time} · {recipe.level}
+                  </p>
+                  <h3>{recipe.title}</h3>
+                  <p className="recipe-card-desc">{recipe.description}</p>
+                  <div className="recipe-card-details">
+                    <h4>Ингредиенты</h4>
+                    <ul>
+                      {recipe.ingredients.map((item) => (
+                        <li key={item}>{item}</li>
+                      ))}
+                    </ul>
+                    <h4>Приготовление</h4>
+                    <ol>
+                      {recipe.steps.map((step) => (
+                        <li key={step}>{step}</li>
+                      ))}
+                    </ol>
+                  </div>
+                </div>
+              </article>
+            ))}
           </div>
         </section>
       </div>
