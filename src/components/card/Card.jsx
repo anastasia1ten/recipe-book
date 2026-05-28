@@ -1,10 +1,14 @@
 import './Card.css';
 
-export const Card = ({ title, children }) => {
+export const Card = ({ title, meta, image, children }) => {
   return (
     <article className="card">
-      {title && <h3 className="card-title">{title}</h3>}
-      <div className="card-body">{children}</div>
+      {image && <div className="card-image">{image}</div>}
+      <div className="card-content">
+        {meta && <p className="card-meta">{meta}</p>}
+        {title && <h3 className="card-title">{title}</h3>}
+        {children && <div className="card-body">{children}</div>}
+      </div>
     </article>
   );
 };

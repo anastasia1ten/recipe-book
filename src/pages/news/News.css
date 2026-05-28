@@ -1,0 +1,25 @@
+.news-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.news-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  max-width: 480px;
+}
+
+.news-form input {
+  flex: 1 1 220px;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+.news-subscribe {
+  padding-top: 24px;
+  border-top: 1px solid #ddd;
+}

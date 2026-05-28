@@ -1,0 +1,36 @@
+.recipes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.recipe-slot {
+  border: 1px dashed #bbb;
+  border-radius: 8px;
+  background: #fff;
+  overflow: hidden;
+}
+
+.recipe-slot-image {
+  min-height: 160px;
+  background: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #888;
+}
+
+.recipe-slot-body {
+  padding: 16px;
+}
+
+.recipe-slot-body h3 {
+  margin: 0 0 8px;
+  font-size: 18px;
+}
+
+.recipe-slot-body p {
+  margin: 0;
+  color: #666;
+  font-size: 14px;
+}

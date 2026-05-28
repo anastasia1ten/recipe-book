@@ -1,0 +1,52 @@
+.feedback-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.feedback-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.feedback-form h2 {
+  margin: 0 0 8px;
+  font-size: 20px;
+}
+
+.feedback-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.feedback-form label span {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.feedback-form input,
+.feedback-form select,
+.feedback-form textarea {
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+  font-family: inherit;
+}
+
+.feedback-form textarea {
+  resize: vertical;
+}
+
+@media (max-width: 768px) {
+  .feedback-content {
+    grid-template-columns: 1fr;
+  }
+}

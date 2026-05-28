@@ -13,7 +13,7 @@ function App() {
   const renderPage = () => {
     switch (page) {
       case 'recipes':
-        return <RecipesPage />;
+        return <RecipesPage onNavigate={setPage} />;
       case 'news':
         return <NewsPage />;
       case 'about':
@@ -21,7 +21,7 @@ function App() {
       case 'feedback':
         return <FeedBackPage />;
       default:
-        return <HomePage />;
+        return <HomePage onNavigate={setPage} />;
     }
   };
 
@@ -29,7 +29,7 @@ function App() {
     <div className="app">
       <Header currentPage={page} onNavigate={setPage} />
       <main className="app-main">{renderPage()}</main>
-      <Footer />
+      <Footer onNavigate={setPage} />
     </div>
   );
 }
